@@ -1,6 +1,12 @@
 import React, { useState, useCallback } from 'react';
 import { Upload, Settings2, RefreshCw } from 'lucide-react';
-import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
+
+const Alert = ({ title, children, variant = 'default' }) => (
+  <div className={`p-4 mb-4 rounded-lg ${variant === 'destructive' ? 'bg-red-100 text-red-700' : 'bg-blue-100 text-blue-700'}`}>
+    {title && <h5 className="font-bold mb-1">{title}</h5>}
+    <p>{children}</p>
+  </div>
+);
 
 const MeshOptimizer = () => {
   const [file, setFile] = useState(null);
@@ -85,9 +91,8 @@ const MeshOptimizer = () => {
         </div>
 
         {error && (
-          <Alert className="mb-8" variant="destructive">
-            <AlertTitle>Error</AlertTitle>
-            <AlertDescription>{error}</AlertDescription>
+          <Alert title="Error" variant="destructive">
+            {error}
           </Alert>
         )}
 
