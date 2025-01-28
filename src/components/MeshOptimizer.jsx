@@ -135,7 +135,7 @@ const MeshOptimizer = () => {
             </div>
 
             <button
-              className="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 flex items-center justify-center w-full"
+              className="bg-green-500 text-white px-6 py-2 rounded-md hover:bg-green-600 flex items-center justify-center w-full disabled:opacity-50"
               onClick={handleOptimize}
               disabled={isProcessing}
             >
