@@ -1,5 +1,5 @@
-import React, { useState, useCallback } from 'react';
-import { Upload, Settings2, RefreshCw } from 'lucide-react';
+import React, { useState, useCallback } from "react";
+import { Upload, Settings2, RefreshCw } from "lucide-react";
 
 // Simple Alert component
 const Alert = ({ title, children, variant = 'default' }) => (
